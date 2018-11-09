@@ -1,3 +1,29 @@
+第1步：在项目目录中创建一个数据文件夹，下载
+康奈尔电影对话语料库来自
+https://www.cs.cornell.edu/~cristian/Cornell_Movie-Dialogs_Corpus.html
+解压缩它
+
+第2步：更新config.py配置文件中的DATA_PATH 参数
+将DATA_PATH更改为实际存储数据的位置
+
+第3步：运行 python3 data.py 对数据进行数据预处理
+这将对Cornell数据集进行所有预处理，生成processed 文件夹
+里面生成很多10个文件
+
+第4步：
+python3 chatbot.py --mode [train / chat]
+
+如果模式是train，那么你训练聊天机器人。 默认情况下，模型会
+恢复以前训练过的模型（如果有的话）并继续
+对此进行训练。
+
+如果您想从头开始培训，请删除所有checkpoint下的内容
+在检查点文件夹中。
+
+如果模式是聊天，您将进入与机器人的交互模式。
+
+默认情况下，您将使用聊天机器人进行所有对话
+进入已处理文件夹中的文件output_convo.txt。 如果你运行这个聊天机器人，
 
 
 
@@ -207,18 +233,6 @@ u0 +++$+++ u2 +++$+++ m0 +++$+++ ['L207', 'L208']
 
 - raw_script_urls.txt
     -原始来源的url( the urls from which the raw sources were retrieved)
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 # 斯坦福大学的培训课程，机器人的原始数据进行了编码，
